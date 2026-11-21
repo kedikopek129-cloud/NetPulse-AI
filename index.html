@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="NetPulse AI - Çoklu model sohbet platformu">
+  <title>NetPulse AI</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">N</div><div><strong>NetPulse</strong><span>AI STUDIO</span></div></div>
+      <button class="new-chat" id="newChat"><span>＋</span> New chat</button>
+      <div class="side-label">CHATS</div>
+      <div class="history" id="history"></div>
+      <div class="sidebar-bottom">
+        <div class="guest-pill"><span class="online-dot"></span> Guest session</div>
+        <p>Conversations are stored in this browser.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="top-title"><span class="status-dot"></span> AI workspace</div>
+        <button class="icon-btn" id="clearAll" title="Delete all chats" aria-label="Delete all chats">⌫</button>
+      </header>
+
+      <section class="chat-wrap">
+        <div class="welcome" id="welcome">
+          <div class="welcome-orb">✦</div>
+          <p class="eyebrow">NETPULSE AI STUDIO</p>
+          <h1>Bring your ideas.<br><span>Let’s build together.</span></h1>
+          <p class="welcome-copy">Chat with different AI models, all in one place.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Bana öğrenmek için bir JavaScript projesi öner.">⌘ <span>Suggest a coding project</span></button>
+            <button class="suggestion" data-prompt="Kuantum bilgisayarı basitçe açıkla.">✧ <span>Explain a complex topic</span></button>
+            <button class="suggestion" data-prompt="Bir haftalık ders çalışma planı hazırla.">▦ <span>Help me create a plan</span></button>
+          </div>
+        </div>
+
+        <div class="messages" id="messages" aria-live="polite"></div>
+
+        <div class="composer-area">
+          <div class="composer-card">
+            <textarea id="prompt" rows="1" maxlength="12000" placeholder="NetPulse AI'a bir şey sor..." aria-label="Your message"></textarea>
+            <div class="composer-toolbar">
+              <div class="model-control">
+                <span class="model-spark">✦</span>
+                <select id="modelSelect" aria-label="Model seç"></select>
+                <span id="modelStatus" class="model-status">Loading models</span>
+              </div>
+              <button class="send-btn" id="sendBtn" aria-label="Send"><span>Send</span><b>↑</b></button>
+            </div>
+          </div>
+          <div class="disclaimer">NetPulse AI can make mistakes. Verify important information. Free models are subject to provider limits.</div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
